@@ -4,3 +4,6 @@
 require File.expand_path('../config/application', __FILE__)
 
 Rails.application.load_tasks
+
+git_tagger = Gem::Specification.find_by_name "git_tagger"
+load "#{git_tagger.gem_dir}/lib/tasks/deploy.rake"
